@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Thelia">
+  <template name="th:css" value="{stylesheets file=&quot;$FILE$&quot; filters=&quot;$FILTERS$&quot; source=&quot;$SOURCE$&quot; template=&quot;$TEMPLATE$&quot;}&#10;    &lt;link href=&quot;{$asset_url}&quot; rel=&quot;stylesheet&quot;&gt;&#10;{/stylesheets}" description="Stylesheet" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FILTERS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SOURCE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEMPLATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:img" value="{images file='$FILE$'}&#10;    &lt;img src=&quot;{$asset_url}&quot; alt=&quot;$ALT$&quot;&gt;&#10;{/images}" description="Image" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ALT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:js" value="{javascripts file=&quot;$FILE$&quot; source=&quot;$SOURCE$&quot; template=&quot;$TEMPLATE$&quot;}&#10;    &lt;script src=&quot;{$asset_url}&quot;&gt;&lt;/script&gt;&#10;{/javascripts}" description="Javascript" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SOURCE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEMPLATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:int" value="{intl l=&quot;$STRING$&quot; d=&quot;$DOMAIN$&quot; js=1}" description="Internationalization" toReformat="false" toShortenFQNames="true">
+    <variable name="STRING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:date" value="{format_date date=$DATE$ format=&quot;$FORMAT$&quot; output=&quot;$OUTPUT$&quot;}" description="Format date" toReformat="false" toShortenFQNames="true">
+    <variable name="DATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FORMAT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OUTPUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:num" value="{format_number number=&quot;$NUMBER$&quot; decimals=&quot;1&quot; dec_point=&quot;,&quot; thousands_sep=&quot; &quot;}" description="Format number" toReformat="false" toShortenFQNames="true">
+    <variable name="NUMBER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:money" value="{format_money number=&quot;$NUMBER$&quot; decimals=&quot;1&quot; dec_point=&quot;,&quot; thousands_sep=&quot; &quot; symbol=&quot;$&quot;}" description="Format money" toReformat="false" toShortenFQNames="true">
+    <variable name="NUMBER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:url-path" value="&lt;a href=&quot;{url path=&quot;$PATH$&quot; noamp=1}&quot;&gt;$LINK$&lt;/a&gt;" description="Url path" toReformat="false" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:url-file" value="&lt;a href=&quot;{url file=&quot;$FILE$&quot;}&quot;&gt;$FILE_NAME$&lt;/a&gt;" description="Url file" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FILE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:viewurl" value="&lt;a href=&quot;{viewurl view=&quot;$VIEW$&quot;}&quot;&gt;$LINK$&lt;/a&gt;" description="View url" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:admin-viewurl" value="&lt;a href=&quot;{admin_viewurl view=&quot;$VIEW$&quot;}&quot;&gt;$LINK$&lt;/a&gt;" description="Admin view url" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:current" value="&lt;a href=&quot;{url path={navigate to=&quot;current&quot;}}&quot;&gt;$LINK$&lt;/a&gt;" description="Navigate to current" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:previous" value="&lt;a href=&quot;{url path={navigate to=&quot;previous&quot;}}&quot;&gt;$LINK$&lt;/a&gt;" description="Navigate to previous" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:index" value="&lt;a href=&quot;{url path={navigate to=&quot;index&quot;}}&quot;&gt;$LINK$&lt;/a&gt;" description="Navigate to index" toReformat="false" toShortenFQNames="true">
+    <variable name="LINK" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:sub" value="{$SUBSTITUTION$ attr=&quot;$ATTR$&quot;}" description="Substitution" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBSTITUTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ATTR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-accessory" value="{loop name=&quot;$NAME$&quot; type=&quot;accessory&quot; product=&quot;$PRODUCT$&quot;}&#10;    $END$&#10;{/loop}" description="Accessory loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PRODUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-address" value="{loop name=&quot;$NAME$&quot; type=&quot;address&quot;}&#10;    $END$&#10;{/loop}" description="Address loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-admin" value="{loop name=&quot;$NAME$&quot; type=&quot;admin&quot;}&#10;    $END$&#10;{/loop}" description="Admin loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-area" value="{loop name=&quot;$NAME$&quot; type=&quot;area&quot;}&#10;    $END$&#10;{/loop}" description="Area loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-asso-content" value="{loop name=&quot;$NAME$&quot; type=&quot;associated_content&quot; product=&quot;$PRODUCT&quot; category=&quot;$CATEGORY$&quot;}&#10;    $END$&#10;{/loop}" description="Associated content loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CATEGORY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-attr" value="{loop name=&quot;$NAME$&quot; type=&quot;attribute&quot;}&#10;    $END$&#10;{/loop}" description="Attribute loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-attr-av" value="{loop name=&quot;$NAME$&quot; type=&quot;attribute_availability&quot;}&#10;    $END$&#10;{/loop}" description="Attribute availability loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-attr-comb" value="{loop name=&quot;$NAME$&quot; type=&quot;attribute_combination&quot; product_sale_elements=&quot;$PSE$&quot;}&#10;    $END$&#10;{/loop}" description="Attribute combination loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PSE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-auth" value="{loop name=&quot;$NAME$&quot; type=&quot;auth&quot; role=&quot;$ROLE$&quot;}&#10;    $END$&#10;{/loop}" description="Auth loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ROLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-brand" value="{loop name=&quot;$NAME$&quot; type=&quot;brand&quot;}&#10;    $END$&#10;{/loop}" description="Brand loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-cart" value="{loop name=&quot;$NAME$&quot; type=&quot;cart&quot;}&#10;    $END$&#10;{/loop}" description="Cart loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-cat" value="{loop name=&quot;$NAME$&quot; type=&quot;category&quot;}&#10;    $END$&#10;{/loop}" description="Category loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-cat-path" value="{loop name=&quot;$NAME$&quot; type=&quot;category-path&quot; category=&quot;$CATEGORY$&quot;}&#10;    $END$&#10;{/loop}" description="Category path loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CATEGORY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-cat-tree" value="{loop name=&quot;$NAME$&quot; type=&quot;category-tree&quot; category=&quot;$CATEGORY$&quot;}&#10;    $END$&#10;{/loop}" description="Category tree loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CATEGORY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-conf" value="{loop name=&quot;$NAME$&quot; type=&quot;config&quot;}&#10;    $END$&#10;{/loop}" description="Config loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-content" value="{loop name=&quot;$NAME$&quot; type=&quot;content&quot;}&#10;    $END$&#10;{/loop}" description="Content loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-country" value="{loop name=&quot;$NAME$&quot; type=&quot;country&quot;}&#10;    $END$&#10;{/loop}" description="Country loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-coupon" value="{loop name=&quot;$NAME$&quot; type=&quot;order_coupon&quot;}&#10;    $END$&#10;{/loop}" description="Coupon loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-currency" value="{loop name=&quot;$NAME$&quot; type=&quot;currency&quot;}&#10;    $END$&#10;{/loop}" description="Currency loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-customer" value="{loop name=&quot;$NAME$&quot; type=&quot;customer&quot;}&#10;    $END$&#10;{/loop}" description="Customer loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-delivery" value="{loop name=&quot;$NAME$&quot; type=&quot;delivery&quot;}&#10;    $END$&#10;{/loop}" description="Delivery loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-doc" value="{loop name=&quot;$NAME$&quot; type=&quot;document&quot;}&#10;    $END$&#10;{/loop}" description="Document loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-feature" value="{loop name=&quot;$NAME$&quot; type=&quot;feature&quot;}&#10;    $END$&#10;{/loop}" description="Feature loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-feature-av" value="{loop name=&quot;$NAME$&quot; type=&quot;feature-availability&quot;}&#10;    $END$&#10;{/loop}" description="Feature availability loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-feature-val" value="{loop name=&quot;$NAME$&quot; type=&quot;feature_value&quot; feature=&quot;$FEATURE$&quot; product=&quot;$PRODUCT$&quot;}&#10;    $END$&#10;{/loop}" description="Feature value loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FEATURE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PRODUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-folder" value="{loop name=&quot;$NAME$&quot; type=&quot;folder&quot;}&#10;    $END$&#10;{/loop}" description="Folder loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-folder-path" value="{loop name=&quot;$NAME$&quot; type=&quot;folder-path&quot; folder=&quot;$FOLDER$&quot;}&#10;    $END$&#10;{/loop}" description="Folder path loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-folder-tree" value="{loop name=&quot;$NAME$&quot; type=&quot;folder-tree&quot; folder=&quot;$FOLDER$&quot;}&#10;    $END$&#10;{/loop}" description="Folder tree loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-img" value="{loop name=&quot;$NAME$&quot; type=&quot;image&quot;}&#10;    $END$&#10;{/loop}" description="Image loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-lang" value="{loop name=&quot;$NAME$&quot; type=&quot;lang&quot;}&#10;    $END$&#10;{/loop}" description="Lang loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-module" value="{loop name=&quot;$NAME$&quot; type=&quot;module&quot;}&#10;    $END$&#10;{/loop}" description="Module loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order" value="{loop name=&quot;$NAME$&quot; type=&quot;order&quot;}&#10;    $END$&#10;{/loop}" description="Order loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-address" value="{loop name=&quot;$NAME$&quot; type=&quot;order_address&quot; id=&quot;$ORDER$&quot;}&#10;    $END$&#10;{/loop}" description="Order address loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-coupon" value="{loop name=&quot;$NAME$&quot; type=&quot;order_coupon&quot; order=&quot;$ORDER$&quot;}&#10;    $END$&#10;{/loop}" description="Order coupon loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-product" value="{loop name=&quot;$NAME$&quot; type=&quot;order_product&quot; order=&quot;$ORDER$&quot;}&#10;    $END$&#10;{/loop}" description="Order product loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-product-attr-comb" value="{loop name=&quot;$NAME$&quot; type=&quot;order_product_attribute_combination&quot; order_product=&quot;$ORDER_PRODUCT$&quot;}&#10;    $END$&#10;{/loop}" description="Order product attribute combination loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER_PRODUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-product-tax" value="{loop name=&quot;$NAME$&quot; type=&quot;order_product_tax&quot; order_product=&quot;$ORDER_PRODUCT$&quot;}&#10;    $END$&#10;{/loop}" description="Order product tax loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER_PRODUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-order-st" value="{loop name=&quot;$NAME$&quot; type=&quot;order_status&quot; id=&quot;$ORDER$&quot;}&#10;    $END$&#10;{/loop}" description="Order status loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-pay" value="{loop name=&quot;$NAME$&quot; type=&quot;payment&quot;}&#10;    $END$&#10;{/loop}" description="Order payment loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-prod" value="{loop name=&quot;$NAME$&quot; type=&quot;product&quot;}&#10;    $END$&#10;{/loop}" description="Order product loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-pse" value="{loop name=&quot;$NAME$&quot; type=&quot;loop_product_sale_elements&quot;}&#10;    $END$&#10;{/loop}" description="Order product sale elements loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-tax" value="{loop name=&quot;$NAME$&quot; type=&quot;tax&quot;}&#10;    $END$&#10;{/loop}" description="Tax loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-tax-rule" value="{loop name=&quot;$NAME$&quot; type=&quot;tax-rule&quot;}&#10;    $END$&#10;{/loop}" description="Tax rule loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:loop-title" value="{loop name=&quot;$NAME$&quot; type=&quot;title&quot;}&#10;    $END$&#10;{/loop}" description="Title loop" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:form" value="{form name=&quot;$NAME$&quot;}&#10;    &lt;form method=&quot;post&quot; action=&quot;$ACTION$&quot; {form_enctype form=$form}&gt;&#10;&#10;        {form_hidden_fields form=$form}&#10;&#10;        {form_field form=$form field=&quot;$FIELD$&quot;}&#10;           &lt;label&gt;{intl l=&quot;{$label}&quot;}&lt;/label&gt;&#10;           &lt;input type=&quot;text&quot; name=&quot;{$name}&quot; value=&quot;{$value}&quot; {$attr}&gt;&#10;        {/form_field}&#10;&#10;    &lt;/form&gt;&#10;{/form}" description="Form" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:tpl" value="&lt;!doctype html&gt;&#10;&#10;{* Declare assets directory, relative to template base directory *}&#10;{declare_assets directory='assets'}&#10;{* Set the default translation domain, that will be used by {intl} when the 'd' parameter is not set *}&#10;{default_translation_domain domain='fo.default'}&#10;&#10;{* -- Define some stuff for Smarty ------------------------------------------ *}&#10;{config_load file='variables.conf'}&#10;{block name=&quot;init&quot;}{/block}&#10;{block name=&quot;no-return-functions&quot;}{/block}&#10;{assign var=&quot;store_name&quot; value=&quot;{config key=&quot;store_name&quot;}&quot;}&#10;{assign var=&quot;store_description&quot; value=&quot;{config key=&quot;store_description&quot;}&quot;}&#10;{if not $store_name}{assign var=&quot;store_name&quot; value=&quot;{intl l='Thelia V2'}&quot;}{/if}&#10;{if not $store_description}{assign var=&quot;store_description&quot; value=&quot;$store_name&quot;}{/if}&#10;&#10;{* paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither *}&#10;&lt;!--[if lt IE 7 ]&gt;&lt;html class=&quot;no-js oldie ie6&quot; lang=&quot;{lang attr=&quot;code&quot;}&quot;&gt; &lt;![endif]--&gt;&#10;&lt;!--[if IE 7 ]&gt;&lt;html class=&quot;no-js oldie ie7&quot; lang=&quot;{lang attr=&quot;code&quot;}&quot;&gt; &lt;![endif]--&gt;&#10;&lt;!--[if IE 8 ]&gt;&lt;html class=&quot;no-js oldie ie8&quot; lang=&quot;{lang attr=&quot;code&quot;}&quot;&gt; &lt;![endif]--&gt;&#10;&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;html lang=&quot;{lang attr=&quot;code&quot;}&quot; class=&quot;no-js&quot;&gt; &lt;!--&lt;![endif]--&gt;&#10;&lt;head&gt;&#10;&#10;    {* Test if javascript is enabled *}&#10;    &lt;script&gt;(function(H) { H.className=H.className.replace(/\bno-js\b/,'js') } )(document.documentElement);&lt;/script&gt;&#10;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;&#10;    {* Page Title *}&#10;    &lt;title&gt;{block name=&quot;page-title&quot;}{strip}{if $page_title}{$page_title}{elseif $breadcrumbs}{foreach from=$breadcrumbs|array_reverse item=breadcrumb}{$breadcrumb.title|unescape} - {/foreach}{$store_name}{/if}{/strip}{/block}&lt;/title&gt;&#10;&#10;    {* Meta Tags *}&#10;    &lt;meta name=&quot;generator&quot; content=&quot;{intl l='Thelia V2'}&quot;&gt;&#10;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;&#10;    {block name=&quot;meta&quot;}&#10;        &lt;meta name=&quot;description&quot; content=&quot;{if $page_description}{$page_description}{else}{$store_description|strip|truncate:120}{/if}&quot;&gt;&#10;        &lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot;&gt;&#10;    {/block}&#10;&#10;    {* Stylesheets *}&#10;    {stylesheets file='$CSS$'}&#10;        &lt;link rel=&quot;stylesheet&quot; href=&quot;{$asset_url}&quot;&gt;&#10;    {/stylesheets}&#10;&#10;    {block name=&quot;stylesheet&quot;}{/block}&#10;&#10;    {* Favicon *}&#10;    {images file='$FAVICON_ICO$'}&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{$asset_url}&quot;&gt;{/images}&#10;    {images file='$FAVICON_PNG$'}&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;{$asset_url}&quot; /&gt;{/images}&#10;&#10;    {* Feeds *}&#10;    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{intl l='All products'}&quot; href=&quot;{url path=&quot;/feed/catalog/{lang attr=&quot;locale&quot;}&quot;}&quot; /&gt;&#10;    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{intl l='All contents'}&quot; href=&quot;{url path=&quot;/feed/content/{lang attr=&quot;locale&quot;}&quot;}&quot; /&gt;&#10;    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{intl l='All brands'}&quot;   href=&quot;{url path=&quot;/feed/brand/{lang attr='locale'}&quot;}&quot; /&gt;&#10;    {block name=&quot;feeds&quot;}{/block}&#10;&#10;    {* HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries *}&#10;    &lt;!--[if lt IE 9]&gt;&#10;    &lt;script src=&quot;//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;&#10;    &lt;script src=&quot;//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js&quot;&gt;&lt;/script&gt;&#10;    &lt;![endif]--&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body class=&quot;{block name=&quot;body-class&quot;}{/block}&quot; itemscope itemtype=&quot;http://schema.org/WebPage&quot;&gt;&#10;&#10;&#10;&#10;    {block name=&quot;before-javascript-include&quot;}{/block}&#10;    &#10;    &lt;!-- JavaScript --&gt;&#10;    &lt;!--[if lt IE 9]&gt;&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;![endif]--&gt;&#10;    &lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;!--&lt;![endif]--&gt;&#10;    &#10;    &lt;!-- Jquery load --&gt;&#10;    &lt;script&gt;&#10;        if (typeof jQuery == 'undefined') {&#10;            {javascripts file='$JQUERY$'}&#10;                document.write(unescape(&quot;%3Cscript src='{$asset_url}' %3E%3C/script%3E&quot;));&#10;            {/javascripts}&#10;        }&#10;    &lt;/script&gt;&#10;    &#10;    &lt;!-- Bootstrap load --&gt;&#10;    {javascripts file='$BOOTSTRAP$'}&#10;        &lt;script src=&quot;{$asset_url}&quot;&gt;&lt;/script&gt;&#10;    {/javascripts}&#10;    &#10;    {block name=&quot;after-javascript-include&quot;}{/block}&#10;    &#10;    {block name=&quot;javascript-initialization&quot;}{/block}&#10;    &#10;    &lt;!-- Custom scripts --&gt;&#10;    {javascripts file='$JS$'}&#10;        &lt;script src=&quot;{$asset_url}&quot;&gt;&lt;/script&gt;&#10;    {/javascripts}&#10;    &lt;/body&gt;&#10;&lt;/html&gt;" description="Template" toReformat="false" toShortenFQNames="true">
+    <variable name="CSS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FAVICON_ICO" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FAVICON_PNG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="JQUERY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BOOTSTRAP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="JS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="th:block" value="{block name=&quot;$NAME&quot;}&#10;    $END$&#10;{/block}" description="Block" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
+
