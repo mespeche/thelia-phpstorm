@@ -66,6 +66,7 @@ OS X: `~/Library/Preferences/<product name><version number>/templates`
 ----------
 | Component                      | Snippet code                   |
 |------------------------------- | :-----------------------------:|
+| **-- Untyped --** | th:loop |
 | **Accessory** | th:loop-accessory |
 | **Address** | th:loop-address |
 | **Admin** | th:loop-admin |
