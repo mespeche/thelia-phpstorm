@@ -502,6 +502,15 @@
       <option name="OTHER" value="true" />
     </context>
   </template>
+  <template name="th:loop" value="{loop type=&quot;$TYPE$&quot; name=&quot;$NAME$&quot;}&#10;    $END$&#10;{/loop}" description="Empty loop" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
   <template name="th:form" value="{form name=&quot;$NAME$&quot;}&#10;    &lt;form method=&quot;post&quot; action=&quot;$ACTION$&quot; {form_enctype form=$form}&gt;&#10;&#10;        {form_hidden_fields form=$form}&#10;&#10;        {form_field form=$form field=&quot;$FIELD$&quot;}&#10;           &lt;label&gt;{intl l=&quot;{$label}&quot;}&lt;/label&gt;&#10;           &lt;input type=&quot;text&quot; name=&quot;{$name}&quot; value=&quot;{$value}&quot; {$attr}&gt;&#10;        {/form_field}&#10;&#10;    &lt;/form&gt;&#10;{/form}" description="Form" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
